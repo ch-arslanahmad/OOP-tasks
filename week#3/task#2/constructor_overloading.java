@@ -7,13 +7,13 @@ class constructor_overloading {
     int b;
 
 // 1st constructor
-    Testing(int a, int b) {
+    constructor_overloading(int a, int b) {
         this.a=a;
         this.b=b;
     }
     
 // 2nd constructor, same as before just different data_type
-    Testing(float a, float b) {
+    constructor_overloading(float a, float b) {
         // changing the values to 
         this.a=(int) a;
         this.b=(int) b;
@@ -29,10 +29,10 @@ class constructor_overloading {
         // creating objects
     
     // follows 1st contructor
-        Testing int_num = new Testing(1,2);
+        constructor_overloading int_num = new constructor_overloading(1,2);
     // follows 2nd contructor
 
-        Testing float_num = new Testing(1f,2f);
+        constructor_overloading float_num = new constructor_overloading(1f,2f);
         
         int_num.sum();
         System.out.println();
