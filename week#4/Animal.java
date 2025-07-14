@@ -1,11 +1,8 @@
 class Animal {
     
     void run(String name) {
-        System.out.print("The"+ name + "is running");
+        System.out.println("The "+ name + " is running.");
     }
-
-
-    boolean Alive;
 
     public static void main(String[] args) {
         Dog dog = new Dog();
@@ -14,9 +11,8 @@ class Animal {
     }    
 }
 
-class Dog{
+class Dog extends Animal{
     void speak() {
-        System.out.print("Woof Woof");
+        System.out.println("Woof Woof!");
     }
-
 }
