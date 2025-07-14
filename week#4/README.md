@@ -11,5 +11,5 @@ To understand the code - you need to either know basic:
 - Java
 - C++
 
-In this we have C++ & Java code which uses inheritance while Java uses `super` code.
+In this we have C++ & Java code which uses inheritance while Java uses `super` keyword.
 
