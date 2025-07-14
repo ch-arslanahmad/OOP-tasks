@@ -1,10 +1,6 @@
-/* Inheritance in Java is a mechanism where one (child) class can inherit fields and methods from another (parent) class.
- * In this example, we have a parent class `Animal` and a child class `Dog` that extends/inherits `Animal`.
- * The `Dog` class inherits the `run` method from `Animal` and has its own method `speak`.
- * The `main` method creates an object/instance of `Dog`, calls the `run` method from `Animal`, and the `speak` method from `Dog`.
-*/
 // parent_class
 class Animal {
+    boolean alive;
 // method of animal: run
     void run(String name) {
         System.out.println("The "+ name + " is running.");
@@ -24,6 +20,11 @@ class Animal {
 class Dog extends Animal{
     // method of dog: speak
     void speak() {
-        System.out.println("Woof Woof!");
+        // use of super in method;
+        super.run("Super");
+        // use of super in class;
+        super.alive = true;
+        System.out.println("Alive: " + super.alive);
+        System.out.println("Dog says: Woof Woof!");
     }
 }
