@@ -12,7 +12,7 @@ class BankAccount {
     }
     
     int getChoice(Scanner input) {
-        System.out.print("1. See Balance\n2. See Balance with Limits\n3. Deposit Money\n4. Withdraw Money\n\nEnter your choice (1-4): ");
+        System.out.print("1. See Balance\n2. See Balance with Limits\n3. Deposit Money\n4. Withdraw Money\n5. Exit\n\nEnter your choice (1-5): ");
         int choice =  input.nextInt();
         return choice;
     }
@@ -24,23 +24,35 @@ class BankAccount {
         return balance;
     }
     void getLimit() {
-        System.out.print("Withdrawal Limit: " + withdrawal_Limit);
-        System.out.print("Deposit Limit: " + deposit_Limit);
+        System.out.println("Withdrawal Limit: " + withdrawal_Limit);
+        System.out.println("Deposit Limit: " + deposit_Limit);
     }
     
     void deposit(Scanner input) {
-        System.out.print("Money to Deposit: ");
+        System.out.print("Enter amount to deposit: ");
         int deposit = input.nextInt();
+        if(deposit<= deposit_Limit) {
         balance = deposit + balance;
         deposit_Limit = deposit_Limit - deposit;
+        System.out.println(deposit + "Rs have been successfully deposited.");
+        }
+        else {
+            System.out.println("ERROR! Deposit money exceeds the deposit limit.");
+        }
     }
     
     void withdrawal(Scanner input) {
-        System.out.print("Money to Withdraw: ");
+        System.out.print("Enter amount to Withdraw: ");
         int withdrawal = input.nextInt();
-        if(balance<= withdrawal) {
+        System.out.print("Rs.");
+        if(balance>= withdrawal) {
+            if(withdrawal<= withdrawal_Limit) {
         balance = balance - withdrawal;
         withdrawal_Limit = withdrawal_Limit - withdrawal;
+            }
+            else {
+                System.out.println("It exceeds Withdrawl Limit.");
+            }
         }
         else {
             System.out.println("ERROR! Not Enough Balance");
@@ -49,21 +61,16 @@ class BankAccount {
     
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        BankAccount Person1 = new BankAccount("Arslan", 100000);
-        
-
-        
+        BankAccount Person1 = new BankAccount("Arslan", 100000);        
 
         while(true) {
-
         int choice = Person1.getChoice(input);
-        
             switch(choice) {
                 case 1:
-                    System.out.println(Person1.getBalance());
+                    System.out.println("The balance is = " + Person1.getBalance() + "Rs");
                 break;
                 case 2:
-                    Person1.getBalance();
+                    System.out.println("The balance is = " + Person1.getBalance() + "Rs");
                     Person1.getLimit();
                 break;
                 case 3:
@@ -77,7 +84,7 @@ class BankAccount {
                         input.close();
                         return;
                     default:
-                    System.out.println("Enter VALID input...");
+                    System.out.println("Enter VALID input... or press 5 for exit.");
             }
         }
     }
