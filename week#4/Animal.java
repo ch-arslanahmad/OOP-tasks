@@ -1,7 +1,6 @@
 // Use `final` and `virtual` keywords for control
 // parent_class
 class Animal {
-    boolean alive;
 // method of animal: run
 // there is no virtual keyword in java, all public methods are virtual by default: hence i will simply use final to stop overriding.
     final void run() {
@@ -27,7 +26,6 @@ class Animal {
 class Dog extends Animal{
     // method of dog: speak (overriding method)
     @Override void speak() {
-        // use of super in method;
         System.out.print("Dog says: Woof Woof!");
     }
 }
