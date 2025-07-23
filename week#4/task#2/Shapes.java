@@ -1,5 +1,9 @@
 public class Shapes {
+    float radius;
+    static float PI = 3.14f;
 
+    float height;
+    float width;
 
     public static void main(String[] args) {
         Circle shape1 = new Circle(10f);
@@ -11,8 +15,7 @@ public class Shapes {
 }
 
 class Circle extends Shapes{
-    float radius;
-    static float PI = 3.14f;
+
 
     Circle(float radius) {
         this.radius = radius;
@@ -27,8 +30,7 @@ class Circle extends Shapes{
 
 
 class Rectangle extends Shapes{
-    float height;
-    float width;
+
 
     Rectangle(float height, float width) {
         this.height = height;
