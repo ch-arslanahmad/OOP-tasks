@@ -1,5 +1,3 @@
-//NOTE: OUTPUT IS ZERO: fix that: error was simply fixed by assigning value in the constructor
-
 // header file
 #include<iostream>
 // using these for easy string & output
@@ -12,11 +10,9 @@ class Shapes {
 public:
 // members/attributes
     float radius;
-// only declaring static as it cannot be initilized in class
-    static float PI;
+//  UPDATED: declaring & initilizing static variable in class: only possible using constexpr
+    constexpr static float PI = 3.14;
 };
-// initilized the static variables
-float Shapes::PI = 3.14;
 
 // child class
 class Circle : public Shapes {
