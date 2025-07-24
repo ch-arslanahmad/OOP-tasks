@@ -1,4 +1,4 @@
-// NOTE: OUTPUT IS ZERO: fix that
+//NOTE: OUTPUT IS ZERO: fix that: error was simply fixed by assigning value in the constructor
 
 // header file
 #include<iostream>
@@ -23,6 +23,7 @@ class Circle : public Shapes {
 public:
 // Circle constructor using attributes from parent
     Circle(float radius) {
+        this->radius = radius;
     }
 // findArea method
     void findArea() {
