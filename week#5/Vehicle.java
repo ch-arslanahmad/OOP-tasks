@@ -1,5 +1,8 @@
 // Implement method overriding examples
 // finding speed of a specific model using polymorphism
+/* this program uses dynamic dispatch as its the necesscity of run-time polymorphism.
+Dynamic Dispatch is a method in which the method that is to run in inheritance classes is decided in runtime.
+ */
 // public class
 public class Vehicle {
     int speed;
