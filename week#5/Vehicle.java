@@ -2,6 +2,7 @@
 // finding speed of a specific model using polymorphism
 /* this program uses dynamic dispatch as its the necesscity of run-time polymorphism.
 Dynamic Dispatch is a method in which the method that is to run in inheritance classes is decided in runtime.
+This is achieved by creating a reference of object in a base class pointing to the child class. Enabling overriding via Java built-in virtual methods, that allows it to execute method not based on reference type rather where the object is i.e., child class, this is done during runtime, This is called runtime polymorphism.
  */
 // public class
 public class Vehicle {
