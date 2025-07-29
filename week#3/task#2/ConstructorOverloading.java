@@ -20,7 +20,7 @@ class ConstructorOverloading {
     }
     
 // sum method
-    int sum() {
+    public int sum() {
         return a+b;
     }
     
