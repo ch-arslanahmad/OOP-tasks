@@ -4,11 +4,11 @@ There are two types of Polymorphism:
 - Run-time Polymorphism - in which the method to be executed is decided on runtime.
 - Compile-time Polymorphism - 
 
-1. Run-Time (Dynamic) Polymorphism
-## Virtual Methods:
+- Run-Time (Dynamic) Polymorphism
+## 1. Virtual Methods:
 Virtual Methods are methods that can be overridden. These are the ___default methods in Java___ while you need to use `virtual` keyword in C++.
 
-## Dynamic Dispatch:
+## 2. Dynamic Dispatch:
 Dynamic dispatch is the mechnanism/technique on how you use virtual methods and apply run-time polymorphism.
 This is achieved by creating a reference of object in a base class pointing to the child class. Enabling overriding via Java built-in virtual methods, that allows it to execute method not based on reference type rather where the object is i.e., child class, this is done during runtime, This is called runtime polymorphism.
   - **C++ uses vTables & vPointers:**
@@ -49,6 +49,13 @@ int main() {
 }
 
 ```
+## 3. Abstract Classes
+Discussed in [Task#2](/task#2)
+
+
+## 4. Interfaces
+Discussed in [Task#2](/task#2)
+
 
 
 
