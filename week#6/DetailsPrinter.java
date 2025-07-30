@@ -42,7 +42,7 @@ public class DetailsPrinter {
     void writeFile() {
     try {
     FileWriter writer = new FileWriter("details.txt" , true);
-        writer.write("Name: " + name + "\nAge: " + age);
+        writer.write("Name," + name + "\nAge," + age);
         writer.close();
         System.out.println("Added Text Successful.");
     } catch (Exception e) {
@@ -52,6 +52,30 @@ public class DetailsPrinter {
     }
 
 
+    // read in a file (line-by-line)
+    void ReadFile() {
+
+        try {
+        // creates file object
+        File thefile = new File("details.txt");
+        // Scanner object for reading a line
+        Scanner fileRead = new Scanner(thefile);
+        // loop to read all lines in a loop
+        while(fileRead.hasNextLine()) {
+            String data = fileRead.nextLine();
+            System.out.println(data);
+        }
+        // closing to prevent unexpected behaviour
+        fileRead.close();
+        }
+
+        catch (IOException o) {
+            System.out.println("Error Occured.");
+            System.out.println(o);
+
+        }
+    }
+
 
 
     // main method
@@ -59,12 +83,14 @@ public class DetailsPrinter {
     DetailsPrinter user = new DetailsPrinter();
     // Scanner object
     Scanner input = new Scanner(System.in);
+    // Scanner object for file_read
 
     user.getName(input);
     user.getAge(input);
     input.close();
     user.makeFile();
     user.writeFile();
+    user.ReadFile();
     }
 
 }
