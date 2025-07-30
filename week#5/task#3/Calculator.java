@@ -1,4 +1,4 @@
-// runtime-polymorphism
+// compiletime-polymorphism
 // class
 public class Calculator {
 
