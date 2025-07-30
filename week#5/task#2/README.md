@@ -28,7 +28,7 @@ Code example is in [interface_Animal.java](interface_Animal.java)
 
 | Abstract Classes                                                               | Interface                                                                     |
 |--------------------------------------------------------------------------------|-------------------------------------------------------------------------------|
-| Uses, extends  keyword for inheritance                                         | Uses, implements keyword for inheritance,                                     |
+| Uses, `extends` keyword for inheritance                                         | Uses, `implements` keyword for inheritance,                                     |
 | Cannot instantiate objects, abstract methods directly                          | Cannot instantiate objects, abstract methods directly                         |
 | A variable can and cannot be initialized.                                      | A variable in the interface must be initialized.                              |
 | A class can only extend one abstract class                                     | A class can have multiple interfaces                                          |
@@ -36,6 +36,6 @@ Code example is in [interface_Animal.java](interface_Animal.java)
 | The abstract methods declared must be initialized in its child/derived classes | As every method is abstract hence must be initialized in its derived classes. |
 | The abstract methods must be overridden by derived classes                     | The abstract methods must be overridden by derived classes                    |
 | Can have constructors                                                          | Cannot have constructors                                                      |
-| Variables can be static, non-static, final and non-final etc                   | Variables can be static, public, final                                        |
+| Variables can be `static`, non-static, `final` and non-final etc               | Variables can be `static`, `public`, `final`                                        |
 
 
