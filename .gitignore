@@ -1,8 +1,11 @@
-# Ignore Java class files
+# Java class files
 *.class
-# Ignore C++ exe files
+
+# Windows executables
 *.exe
+
+# Ignore all extensionless files (like Linux executables)
+# Allow folders and files with extensions
 *
 !*/
 !*.*
-
