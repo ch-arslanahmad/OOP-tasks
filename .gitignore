@@ -1,11 +1,10 @@
-# Java class files
-*.class
-
-# Windows executables
-*.exe
-
 # Ignore all extensionless files (like Linux executables)
 # Allow folders and files with extensions
 *
 !*/
 !*.*
+
+!LICENSE
+
+# Java class files
+*.class
