@@ -1,2 +1,4 @@
 # Ignore Java class files
 *.class
+# Ignore C++ exe files
+*.exe
