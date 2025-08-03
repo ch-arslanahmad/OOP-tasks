@@ -1,0 +1,8 @@
+Aug 03, 2025 7:31:47 AM logFile division
+INFO: Divisor cannot be zero.
+Aug 03, 2025 7:31:48 AM logFile division
+SEVERE: Illegal Operation
+Aug 03, 2025 7:54:00 AM logAuth doAuth
+INFO: Entered Incorrect Password.
+Aug 03, 2025 7:54:00 AM logAuth doAuth
+SEVERE: Illegal Authorization
