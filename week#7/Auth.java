@@ -1,9 +1,11 @@
+// import
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.regex.*;
 import java.util.logging.*;
 import java.io.File;
 
+// Exception classes
 
     class invalidUsername extends Exception {
 
@@ -20,25 +22,28 @@ import java.io.File;
     }
 
 
-
+// main public class
 public class Auth {
-
+    // array list for username
     ArrayList <String> username = new ArrayList<>();
     ArrayList <String> password = new ArrayList<>();
+    // regex for username & password
     String userRegex = "^[0-9a-z]{6,16}$";
     String passRegex = "^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$";
 
+    // creating logger object
     private static final Logger logger = Logger.getLogger(Auth.class.getName());
-
+    // creating a variable for logger Filehandler
     private static FileHandler fh;
 
     static {
-    
+    // 
     try {
+        // so logging is not shown in console
         LogManager.getLogManager().reset();
         String a = "Authlog.txt";
         File file = new File(a);
-        
+        // if file does not exist, create it
         if(!(file.exists())) {
             file.createNewFile();
         }
@@ -144,6 +149,7 @@ public class Auth {
                 System.out.print("Username: ");
                 verifiedUser = setUser(input);
             }
+            // ask password only if username is added
             if(verifiedUser) {
                 System.out.print("Password: ");
                 validPass = setPass(input);
@@ -155,7 +161,7 @@ public class Auth {
                 }
             }
         }
-        
+        // closing the input
         input.close();
         return false;
 
@@ -168,6 +174,7 @@ public class Auth {
         user.makeUser(input);
         
 
+        // closing the logger
         fh.close();
         
     }
