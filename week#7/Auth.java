@@ -1,31 +1,8 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.regex.*;
-
-
 import java.util.logging.*;
-public class Auth {
-
-    ArrayList <String> username = new ArrayList<>();
-    ArrayList <String> password = new ArrayList<>();
-    String userRegex = "^[0-9a-z]{6,16}$";
-    String passRegex = "^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$";
-
-    private static final Logger logger = Logger.getLogger(Auth.class.getName());
-
-    private static FileHandler fh;
-
-    static {
-    
-    try {
-        fh = new FileHandler("week#7/authlog.txt", true);
-        logger.addHandler(fh);
-        fh.setFormatter(new SimpleFormatter());
-    } catch (Exception e) {
-        e.printStackTrace();
-    }
-        
-    }
+import java.io.File;
 
 
     class invalidUsername extends Exception {
@@ -41,6 +18,40 @@ public class Auth {
             super(m);
         }
     }
+
+
+
+public class Auth {
+
+    ArrayList <String> username = new ArrayList<>();
+    ArrayList <String> password = new ArrayList<>();
+    String userRegex = "^[0-9a-z]{6,16}$";
+    String passRegex = "^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$";
+
+    private static final Logger logger = Logger.getLogger(Auth.class.getName());
+
+    private static FileHandler fh;
+
+    static {
+    
+    try {
+        LogManager.getLogManager().reset();
+        String a = "Authlog.txt";
+        File file = new File(a);
+        
+        if(!(file.exists())) {
+            file.createNewFile();
+        }
+        fh = new FileHandler(a, true);
+        logger.addHandler(fh);
+        fh.setFormatter(new SimpleFormatter());
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+        
+    }
+
+
 
     boolean setUser(Scanner input) {
         boolean addedUser = false;
