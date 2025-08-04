@@ -53,6 +53,9 @@ public class Auth {
     } catch (Exception e) {
         e.printStackTrace();
     }
+    finally {
+        logger.info("Log File is created!");
+    }
         
     }
 
