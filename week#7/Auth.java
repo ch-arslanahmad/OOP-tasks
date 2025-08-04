@@ -18,7 +18,7 @@ public class Auth {
     static {
     
     try {
-        fh = new FileHandler("authlog.txt", true);
+        fh = new FileHandler("week#7/authlog.txt", true);
         logger.addHandler(fh);
         fh.setFormatter(new SimpleFormatter());
     } catch (Exception e) {
