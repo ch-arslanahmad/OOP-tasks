@@ -13,7 +13,7 @@ interface Vehicle {
     // variables are static final by default
     String MAKER = "Toyota";
 
-    // can only declare method not define it - & public by default
+    // can only declare method not define it - & abstract & public by default
     public void speed(int speed);
 
     public void milage(int milage);
