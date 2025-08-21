@@ -1,2 +1,5 @@
-# uml-learnings
-Everything related to UML (Unified Model Language), that is knowledge how to build visual application models faster &amp; efficiently.
+<h1 align ='center'>UML</h1>
+
+United Modeling Language **(UML)** is a graphical object oriented language which provides a way to visualize application/software architecture as a design of a system.
+
+---
