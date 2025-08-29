@@ -46,7 +46,7 @@ int age
 
 
 They are as following,
-#### Modifiers
+#### 1. Modifiers
 `-` represents a **private** modifier.
 `+` represents a **public** modifier.
 `#` represents a **protected** modifier.
@@ -54,11 +54,39 @@ They are as following,
 
 For _Abstract methods_ you italicize them, like for _`run()`_.
 
-#### DataTypes
+#### 2. DataTypes
 - You write only datatypes or variables in methods,
 i.e., `int age`, int `calculateSpeed()`
 Inside of methods in arguments or parameter variables, you only write its datatype not variable name e.g., `speed(int)`;
 Adding semicolons is not necessary.
+
+#### 3. Relations
+You use lines to represent relations:
+
+  **3.1. Inheritance:**
+
+Arrow line( →) represents Inheritance.
+- Puppy inherits from Dog.
+
+  **3.2. Composition:**
+
+Line with filled diamond shape ( ◆– ) represents composition (has-a relationship) with full dependency, i.e., cannot exist without the other.
+- A car has wheels, A car cannot exist without wheels.
+
+  **3.3. Aggregation:**
+
+This is an element or object without full dependency.
+Its symbol is empty diamand shape with line ◇– 
+- A car has passengers
+
+  **3.4. Association:**
+
+It means connecting what is somewhat related.
+Its symbol is a Plain Line —— 
+- A bank has users.
+
+
+
 
 
 
