@@ -39,3 +39,32 @@ int age
   Animal <-- Cat
 
   ```
+---
+
+<br>
+<h2 align ='center'>Basic Rules of UML</h2>
+
+
+They are as following,
+#### Modifiers
+`-` represents a **private** modifier.
+`+` represents a **public** modifier.
+`#` represents a **protected** modifier.
+
+
+For _Abstract methods_ you italicize them, like for _`run()`_.
+
+#### DataTypes
+- You write only datatypes or variables in methods,
+i.e., `int age`, int `calculateSpeed()`
+Inside of methods in arguments or parameter variables, you only write its datatype not variable name e.g., `speed(int)`;
+Adding semicolons is not necessary.
+
+
+
+
+
+
+
+
+
