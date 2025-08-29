@@ -76,3 +76,61 @@ for(0 to n-i-1 iterations) {
     }
 }
 ```
+
+Now you know about the most basic sorting method, but bubble sorting is by far the most inefficient as you have to go through each and every value.
+
+## 2. Selection Sorting
+Here, more efficient sorting method comes from, **Selection Sorting**:
+
+In this method, you simply 'select' a value and move it by swapping it.
+You select either a min or max value.
+
+Suppose using  `min value`, you select it then put it in the first index, then try again but exluding the first index because its sorted already, then repeat this until whole array becomes sorted.
+
+Like for example, in this array:
+`{5,10,-100,7,5}`
+We want to sort it in ascending order.
+
+**1st Iteration**  
+We select the min which is `-100` which swaps with `5`, so updated array,
+```
+{-100,10,5,7,5}
+```
+
+**2nd Iteration**
+
+We select the min again, its, `5`, it swaps with `10`, we get,
+```
+{-100,5, 10 ,7,5}
+```
+
+**3rd Iteration**
+Now selects the `5` from the end and swaps with `10`. we get,
+```
+{-100,5,5,7,10}
+```
+
+Now its completely sorted.
+
+
+Now moving to pseudo-code,
+
+```
+
+a[n] = {n,n,n,n,n}; // example
+
+for (i to n-1 iterations) {
+    min = i // suppose to do comparison
+    for(i+1 to n-1) {
+        if(a[min] > a[i]) {
+            min = i; // telling the index of the minimum value
+        }
+
+// now replacing the minimum value with the i value
+
+    }
+}
+```
+
+You can also do it with max, but will have to flip the logic, as max will swap with the last element.
+
