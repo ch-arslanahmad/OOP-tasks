@@ -110,28 +110,78 @@ class Array {
         return a;
     }
 
+    int max(int v1, int v2) {
+        return (v1 > v2 ? v1 : v2);
+    }
+
+    // using Kadane Algo
+
+    /*
+     * So basically, you make 2 variables and set its valeu of first index (as
+     * maxSoFar and currentMax.). Then, for each iteration:
+     * currentMax = You find the maximum between the element itself (A[i]) or the
+     * sum of currentMax + A[i],
+     * maxSoFar: Then, find the maximum between currentMax and maxSoFar and assign
+     * it to maxSoFar. When the loop finishes,
+     * you will have the maximum subarray sum stored in maxSoFar.
+     * This is Kadane Algo, however this is the process not the reason.
+     * 
+     * The algo reasoning is between local and global variables (not in general
+     * sense):
+     * Local means the max value that is the array till now depends on where the i
+     * has reached in loop.
+     * Global means the greatest sum overall of subarrays, which compares currentMax
+     * in literal & variable terms & the next value of array.
+     * 
+     * Local is the max you have got so far, while the global is the greatest sum
+     * you will get.
+     */
+    // finding maximum subarray sum value
+    int maxSum(int[] a) {
+        int currentMax, maxSoFar;
+        currentMax = maxSoFar = a[0];
+        for (int i = 0; i < a.length; i++) {
+            currentMax = max(a[i], currentMax + a[i]);
+            maxSoFar = max(maxSoFar, currentMax);
+        }
+        return maxSoFar;
+    }
+
+    /*
+     * you can flip the logic to find min or any other metric.
+     * The general principle is the same that finding the sub-metric value based on
+     * the data currently accessed ('current' value), hence called currentanything
+     * and then finding a absolute value based on the total data available, so far.
+     */
+
+    int min(int a, int b) {
+        return (a > b ? b : a);
+    }
+
+    int minSum(int[] a) {
+        int currentMin, minSoFar;
+        currentMin = minSoFar = a[0];
+        for (int i = 0; i < a.length; i++) {
+            currentMin = min(a[i], a[i] + currentMin);
+            minSoFar = min(minSoFar, currentMin);
+        }
+        return minSoFar;
+    }
+
     public static void main(String[] args) {
         Array array = new Array();
         Sorting sort = new Sorting();
-        int[] arr = { 5, -100, 10, 1000, 5 };
+        int[] arr = { 5, -100, 10, 1000, 5, -10 };
         int[] arr2 = { 1, 2, 3, 4, 1, 4, 1, 3, 1, 2 };
 
-        System.out.println(" Largest value in array: " + array.findLargest(arr));
-        System.out.println(" Smallest value in array: " + array.findSmallest(arr));
+        System.out.println(array.minSum(arr));
+        System.out.println(array.maxSum(arr));
 
-        System.out.println("Reversed Array: ");
-        int[] reverseArr = array.reverseArray(arr);
-        for (int a : reverseArr) {
-            System.out.print(a + "\t");
-        }
-
-        System.out.println("\n");
-
-        System.out.println(array.arraysSum(arr, arr2));
-
-        int[] dupArr = array.removeDuplicate(sort.bubbleSort(arr2));
-        for (int i : dupArr) {
-            System.out.print(i + "\t");
-        }
+        /*
+         * // template for printing array
+         * for (int i : arr) {
+         * System.out.print(i + "\t");
+         * }
+         */
     }
 }
