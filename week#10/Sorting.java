@@ -1,6 +1,6 @@
 public class Sorting {
 
-    // bubble sort is the most inne
+    // bubble sort is the most easiest
     public int[] bubbleSort(int[] a) {
         // {5,4,-1,-100,100}
         int size = a.length; // 5
@@ -29,6 +29,24 @@ public class Sorting {
         }
         return a;
 
+    }
+
+    public int[] selectionSort(int[] a) {
+        // {5,4,-1,-100,100}
+
+        // outer loop to run
+        for (int o = 0; o < a.length; o++) {
+            int min = o;
+            for (int i = o + 1; i < a.length; i++) {
+                if (a[min] > a[i]) {
+                    min = i;
+                }
+            }
+            int t = a[min];
+            a[min] = a[o];
+            a[o] = t;
+        }
+        return a;
     }
 
 }
