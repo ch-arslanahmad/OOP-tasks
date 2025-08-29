@@ -1,5 +1,6 @@
 
 // Write a program to find the largest and smallest element in an array.
+import java.util.ArrayList;
 import java.util.Arrays;
 
 class Array {
@@ -76,10 +77,45 @@ class Array {
         return 1;
     }
 
+    // remove element in array
+    int[] removeElement(int[] arr, int p) {
+        int size = arr.length;
+        if ((p > size || (p <= 0))) {
+            System.out.println("Position is either 0 or bigger/smaller than array");
+            return arr;
+        }
+        // real array 5;
+        // removed value array = 4;
+        p = p - 1; // to convert into 0-based index
+        int[] newArr = new int[size - 1];
+        for (int i = 0; i < newArr.length; i++) {
+            if (i < p) {
+                newArr[i] = arr[i];
+            } else {
+                newArr[i] = arr[i + 1];
+            }
+        }
+
+        return newArr;
+
+    }
+
+    int[] removeDuplicate(int[] a) {
+        for (int i = 0; i < a.length - 1; i++) {
+            if (a[i] == a[i + 1]) {
+                a = removeElement(a, i + 1); // remove the duplicate
+                i--; // step back to re-check current position
+            }
+        }
+        return a;
+    }
+
     public static void main(String[] args) {
         Array array = new Array();
+        Sorting sort = new Sorting();
         int[] arr = { 5, -100, 10, 1000, 5 };
-        int[] arr2 = { 1, 2, 3, 4 };
+        int[] arr2 = { 1, 2, 3, 4, 1, 4, 1, 3, 1, 2 };
+
         System.out.println(" Largest value in array: " + array.findLargest(arr));
         System.out.println(" Smallest value in array: " + array.findSmallest(arr));
 
@@ -88,8 +124,14 @@ class Array {
         for (int a : reverseArr) {
             System.out.print(a + "\t");
         }
+
         System.out.println("\n");
 
         System.out.println(array.arraysSum(arr, arr2));
+
+        int[] dupArr = array.removeDuplicate(sort.bubbleSort(arr2));
+        for (int i : dupArr) {
+            System.out.print(i + "\t");
+        }
     }
 }
