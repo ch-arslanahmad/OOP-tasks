@@ -9,6 +9,15 @@ To get a basic understanding of DSA, i will do the following tasks:
 - Find the largest subarray sum (simple brute-force / optimized).
 Done in [Array](Array.java)
 
+**Strings:**
+
+- Reverse a string.
+- Count vowels, consonants.
+- Check if two strings are anagrams.
+- Remove duplicates from an array or string.
+
+Done in [Strings](string.java)
+
 2. Practice DSA: Search, Sort, Palindrome
 
 
