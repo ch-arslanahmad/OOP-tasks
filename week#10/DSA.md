@@ -28,5 +28,18 @@ Done in [Strings](string.java)
 
 Done in [Search](Search.java)
 
+**Sorting:**
 
+- Bubble sort
+- Selection sort
+
+Done in [Sorting](Sorting.java)
+
+
+**Palindrome:**
+
+- Check if a string is a palindrome.
+- Check if a number is a palindrome.
+
+ Done in [Palindrome](Palindrome.java).
 
