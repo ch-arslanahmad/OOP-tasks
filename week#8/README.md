@@ -145,9 +145,46 @@ classDiagram
 
 
 
+Now you have basics down,
+
+Lets build Practice modeling small systems (Library, Bank).
+I chose, **Bank**.
+
+## Bank
+- BranchID
+- Access (from 1-3, lowest to highest access)
+**Users**
+
+- ID
+- Username
+- Name
+- password
+- sign_up(String, String)
+- login(String, String)
+
+**Customer**
+
+- balance
+- Withdraw(int)
+- Deposit(int)
+- seebalance()
+- balancelimit()
+
+**Manager**
+- Branch ID
+
+- approveLoan(int)
+- viewAllAccounts()
+
+**Admin**
+  
+- getAuth()
+- int setAccess()
+- setLimits()
 
 
-
+**Logic:** A Bank has _Abstract_ Users which may be Customer, Manager, Admin.
+A bank must have a BranchID and access to users defined/declared. Then defined that the customer & manager can do transactions & administration of the bank respectively while the admin has absolute control.
 
 
 
