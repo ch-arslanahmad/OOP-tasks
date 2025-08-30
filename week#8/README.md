@@ -187,6 +187,62 @@ I chose, **Bank**.
 A bank must have a BranchID and access to users defined/declared. Then defined that the customer & manager can do transactions & administration of the bank respectively while the admin has absolute control.
 
 
+### Bank UML
+
+Now we have to convert this into UML,
+Using Mermaid,
+
+```mermaid
+---
+config:
+  layout: dagre
+title: Banking System Model - UML
+---
+classDiagram
+direction TB
+    class Bank {
+        +int branchID
+        +int access
+    }
+    class Users {
+        -int id
+        -String username
+        -String name
+        -String password
+        -int access
+        +signup(String, String)
+        +login(String, String)
+    }
+    class Customer {
+        +int access = 1
+        -int balance
+        +withdraw(int)
+        +deposit(int)
+        +seeBalance()
+        +balanceLimit()
+    }
+    class Manager {
+        +int access = 2
+        +int branchID
+        +approveLoan(int)
+        +viewAllAccounts()
+    }
+    class Admin {
+        +int access = 3
+        +getAuth()
+        +setAccess()
+        +setLimits()
+    }
+
+    Bank *-- Users : has
+    Users <|-- Customer
+    Users <|-- Manager
+    Users <|-- Admin
+
+```
+
+
+
 
 
 
