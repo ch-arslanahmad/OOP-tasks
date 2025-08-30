@@ -7,6 +7,7 @@ To get a basic understanding of DSA, i will do the following tasks:
 - Find sum, max, min of an array.
 - Reverse an array.
 - Find the largest subarray sum (simple brute-force / optimized).
+
 Done in [Array](Array.java)
 
 **Strings:**
@@ -18,8 +19,14 @@ Done in [Array](Array.java)
 
 Done in [Strings](string.java)
 
-2. Practice DSA: Search, Sort, Palindrome
+1. Practice DSA: Search, Sort, Palindrome
 
+**Search:**
+
+- Linear search in an array.
+- Binary search in a sorted array.
+
+Done in [Search](Search.java)
 
 
 
