@@ -1,7 +1,5 @@
 
 // Write a program to find the largest and smallest element in an array.
-import java.util.ArrayList;
-import java.util.Arrays;
 
 class Array {
 

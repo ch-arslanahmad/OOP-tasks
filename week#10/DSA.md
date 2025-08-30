@@ -2,6 +2,13 @@
 Data Structure & Algorithms is a topic/subject which as its name suggests deals with data structures and algorithms.
 To get a basic understanding of DSA, i will do the following tasks:
 1. Practice basic DSA problems: Arrays & Strings
+**Arrays:**
+
+- Find sum, max, min of an array.
+- Reverse an array.
+- Find the largest subarray sum (simple brute-force / optimized).
+Done in [Array](Array.java)
+
 2. Practice DSA: Search, Sort, Palindrome
 
 
