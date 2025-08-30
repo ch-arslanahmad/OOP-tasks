@@ -68,10 +68,44 @@ You use lines to represent relations:
 Arrow line( →) represents Inheritance.
 - Puppy inherits from Dog.
 
+```mermaid
+classDiagram
+ class Dog {
+
+
+ }
+ class Puppy {
+
+
+ }
+
+
+ Dog <-- Puppy
+
+
+
+
+
+```
+
+
+
+
   **3.2. Composition:**
 
 Line with filled diamond shape ( ◆– ) represents composition (has-a relationship) with full dependency, i.e., cannot exist without the other.
 - A car has wheels, A car cannot exist without wheels.
+
+```mermaid
+classDiagram
+    class Car {
+    }
+    class Wheel {
+    }
+
+    Car *-- Wheel : has
+
+```
 
   **3.3. Aggregation:**
 
@@ -79,11 +113,34 @@ This is an element or object without full dependency.
 Its symbol is empty diamand shape with line ◇– 
 - A car has passengers
 
+
+```mermaid
+
+classDiagram
+    class Car {
+    }
+    class Passenger {
+    }
+
+    Car o-- Passenger : has
+```
+
   **3.4. Association:**
 
 It means connecting what is somewhat related.
 Its symbol is a Plain Line —— 
 - A bank has users.
+
+```mermaid
+classDiagram
+    class Bank {
+    }
+    class User {
+    }
+
+    Bank -- User : has
+
+```
 
 
 
