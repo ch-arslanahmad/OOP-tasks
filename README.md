@@ -93,6 +93,9 @@ The implementations follow a structured CSV-based learning schedule, with tasks 
 - Project documentation and explanations in another repo:
 
 
+[![ReadMe Card](https://github-readme-stats.vercel.app/api/pin/?username=ch-arslanahmad&repo=school_management_system_java)](https://github.com/ch-arslanahmad/school_management_system_java)
+
+
 ## Contributing
 
 Feel free to:
